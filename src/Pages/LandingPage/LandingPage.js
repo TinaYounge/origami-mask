@@ -8,8 +8,8 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
-import MainFeaturedPost from "../../Components/MainFeaturePost/MainFeaturePost";
 import SwipeableTextMobileStepper from "../../Components/Header/Stepper";
+import ListCard from "../../Components/Card/ListCard";
 // import FeaturedPost from "./FeaturedPost";
 // import Main from "./Main";
 // import Sidebar from "./Sidebar";
@@ -18,25 +18,16 @@ import SwipeableTextMobileStepper from "../../Components/Header/Stepper";
 // import post3 from "./blog-post.3.md";
 
 const sections = [
-  { title: "Technology", url: "#" },
-  { title: "Design", url: "#" },
-  { title: "Culture", url: "#" },
-  { title: "Business", url: "#" },
-  { title: "Politics", url: "#" },
-  { title: "Opinion", url: "#" },
-  { title: "Science", url: "#" },
-  { title: "Health", url: "#" },
+  { title: "NEW", url: "#" },
+  { title: "Limited", url: "#" },
+  { title: "Woman", url: "#" },
+  { title: "Man", url: "#" },
+  { title: "Kid", url: "#" },
+  { title: "Your design", url: "#" },
+  { title: "Story", url: "#" },
+  { title: "Contact", url: "#" },
   { title: "Style", url: "#" },
-  { title: "Travel", url: "#" },
 ];
-
-const mainFeaturedPost = {
-  title: "保護された状態を保ち、スタイリッシュに見える",
-  description: "モダンなデザインの3層ハンドメイドマスク",
-  image: "https://source.unsplash.com/random",
-  imageText: "main image description",
-  linkText: "Continue reading…",
-};
 
 const featuredPosts = [
   {
@@ -61,25 +52,29 @@ const images = [
     label: "保護された状態を保ち、スタイリッシュに見える",
     des: "モダンなデザインの3層ハンドメイドマスク",
 
-    imgPath: "https://source.unsplash.com/random",
+    imgPath:
+      "https://images.unsplash.com/photo-1586867763684-05933c155795?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
   },
   {
     label: "保護された状態を保ち、スタイリッシュに見える",
     des: "モダンなデザインの3層ハンドメイドマスク",
 
-    imgPath: "https://source.unsplash.com/random",
+    imgPath:
+      "https://images.unsplash.com/photo-1606501126768-b78d4569d3f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
   },
   {
     label: "保護された状態を保ち、スタイリッシュに見える",
     des: "モダンなデザインの3層ハンドメイドマスク",
 
-    imgPath: "https://source.unsplash.com/random",
+    imgPath:
+      "https://images.unsplash.com/photo-1592199121537-7217efde1c73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80",
   },
   {
     label: "保護された状態を保ち、スタイリッシュに見える",
     des: "モダンなデザインの3層ハンドメイドマスク",
 
-    imgPath: "https://source.unsplash.com/random",
+    imgPath:
+      "https://images.unsplash.com/photo-1603042521335-2bc9c8d9ee3b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
   },
 ];
 // const posts = [post1, post2, post3];
@@ -117,8 +112,8 @@ export default function LandingPage() {
       <Container maxWidth="lg">
         <Header title="Blog" sections={sections} />
         <main>
-          {/* <MainFeaturedPost post={mainFeaturedPost} /> */}
           <SwipeableTextMobileStepper images={images} />
+          <ListCard />
           {/* <Grid container spacing={4}>
             {featuredPosts.map((post) => (
               <FeaturedPost key={post.title} post={post} />
