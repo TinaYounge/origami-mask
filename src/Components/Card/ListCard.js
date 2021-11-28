@@ -4,10 +4,36 @@ import "./Card.css";
 function ListCard() {
   return (
     <div className="landing-page__card--list">
-      <ImgMediaCard />
-      <ImgMediaCard />
-      <ImgMediaCard />
-      <ImgMediaCard />
+      <div className="landing-page__card--single">
+        <ImgMediaCard />
+      </div>{" "}
+      <div className="landing-page__card--single">
+        <ImgMediaCard />
+      </div>{" "}
+      <div className="landing-page__card--single">
+        <ImgMediaCard />
+      </div>{" "}
+      <div className="landing-page__card--single">
+        <ImgMediaCard />
+      </div>{" "}
+      <div className="landing-page__card--single">
+        <ImgMediaCard />
+      </div>{" "}
+      <div className="landing-page__card--single">
+        <ImgMediaCard />
+      </div>{" "}
+      <div className="landing-page__card--single">
+        <ImgMediaCard />
+      </div>{" "}
+      <div className="landing-page__card--single">
+        <ImgMediaCard />
+      </div>{" "}
+      <div className="landing-page__card--single">
+        <ImgMediaCard />
+      </div>{" "}
+      <div className="landing-page__card--single">
+        <ImgMediaCard />
+      </div>{" "}
     </div>
   );
 }

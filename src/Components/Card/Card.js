@@ -23,9 +23,11 @@ export default function ImgMediaCard() {
   return (
     <Card
       className="landing-page__card--border"
-      sx={{
-        maxWidth: { xs: 160, md: 240 },
-      }}
+      sx={
+        {
+          // maxWidth: { xs: 160, md: 240 },
+        }
+      }
     >
       <CardMedia
         component="img"
@@ -50,7 +52,13 @@ export default function ImgMediaCard() {
         emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
       />
       <CardActions>
-        <Typography style={{ color: "black" }}>10,230円（税込）</Typography>
+        <Typography
+          style={{
+            color: "black",
+          }}
+        >
+          10,230円（税込）
+        </Typography>
       </CardActions>
     </Card>
   );
