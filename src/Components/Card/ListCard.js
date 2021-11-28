@@ -12,28 +12,13 @@ function ListCard() {
       </div>{" "}
       <div className="landing-page__card--single">
         <ImgMediaCard />
-      </div>{" "}
+      </div>
       <div className="landing-page__card--single">
         <ImgMediaCard />
       </div>{" "}
       <div className="landing-page__card--single">
         <ImgMediaCard />
-      </div>{" "}
-      <div className="landing-page__card--single">
-        <ImgMediaCard />
-      </div>{" "}
-      <div className="landing-page__card--single">
-        <ImgMediaCard />
-      </div>{" "}
-      <div className="landing-page__card--single">
-        <ImgMediaCard />
-      </div>{" "}
-      <div className="landing-page__card--single">
-        <ImgMediaCard />
-      </div>{" "}
-      <div className="landing-page__card--single">
-        <ImgMediaCard />
-      </div>{" "}
+      </div>
     </div>
   );
 }
