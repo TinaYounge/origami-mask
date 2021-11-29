@@ -17,13 +17,26 @@
   padding-left: 2px;
   padding-right: 2px;
 }
+.landing-page__card--list--next {
+  margin-top: -35vh;
+  margin-bottom: 300px;
+  margin-left: -30px;
+}
 @media screen and (max-width: 600px) {
   .landing-page__card--single {
-    width: 48% !important;
+    width: 40% !important;
     display: inline-block;
-    justify-content: space-between;
+    margin-left: 12px;
   }
   .landing-page__card--list {
     padding-left: 10px;
+
+    width: 100%;
+    overflow-y: hidden;
+  }
+  .landing-page__card--list--next {
+    margin-top: -1800px;
+    margin-bottom: 300px;
+    margin-left: 0;
   }
 }

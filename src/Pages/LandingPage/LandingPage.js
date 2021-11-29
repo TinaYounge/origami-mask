@@ -15,6 +15,7 @@ import ImageListItemLanding from "../../Components/ImageList/ImageList";
 import Message from "../../Components/Message/Message";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
+import FeedBackList from "../../Components/FeedbackList/FeedbackList";
 
 // import FeaturedPost from "./FeaturedPost";
 // import Main from "./Main";
@@ -25,14 +26,14 @@ import Tabs from "@mui/material/Tabs";
 
 const sections = [
   { title: "NEW", url: "#" },
-  { title: "Limited", url: "#" },
-  { title: "Woman", url: "#" },
-  { title: "Man", url: "#" },
-  { title: "Kid", url: "#" },
-  { title: "Your design", url: "#" },
-  { title: "Story", url: "#" },
-  { title: "Contact", url: "#" },
-  { title: "Style", url: "#" },
+  { title: "リミテッド", url: "#" },
+  { title: "レディース", url: "#" },
+  { title: "メンズ", url: "#" },
+  { title: "キッド", url: "#" },
+  { title: "あなたのデザイン", url: "#" },
+  { title: "ストーリー", url: "#" },
+  { title: "連絡先", url: "#" },
+  { title: "スタイル", url: "#" },
 ];
 
 const featuredPosts = [
@@ -185,7 +186,24 @@ export default function LandingPage() {
             <LinkTab label="セール" href="/spam" />
           </Tabs>
           <ListCard />
-
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="div"
+            style={{
+              width: "100%",
+              textAlign: "center",
+              borderBottom: "2px solid #000",
+              lineHeight: "0rem",
+              margin: "50px 0px 20px",
+            }}
+          >
+            <span style={{ padding: "0 10px", backgroundColor: "#ffff" }}>
+              {" "}
+              あなたのデザイン{" "}
+            </span>
+          </Typography>
+          <FeedBackList />
           <Message />
           {/* <Grid container spacing={4}>
             {featuredPosts.map((post) => (
