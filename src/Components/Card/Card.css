@@ -2,10 +2,7 @@
   box-shadow: none !important;
   border: none !important;
 }
-.landing-page__card--border:hover {
-  border: 1px solid rgba(175, 175, 175, 0.808) !important;
-  cursor: pointer;
-}
+
 .landing-page__card--list {
   width: 100%;
   padding-left: 50px;
@@ -21,6 +18,41 @@
   margin-top: -35vh;
   margin-bottom: 300px;
   margin-left: -30px;
+}
+@media screen and (max-width: 600px) {
+  .landing-page__card--single {
+    width: 40% !important;
+    display: inline-block;
+    margin-left: 12px;
+  }
+  .landing-page__card--list {
+    padding-left: 10px;
+    height: 650px;
+    width: 100%;
+    overflow-y: hidden;
+  }
+  .landing-page__card--list--next {
+    margin-top: -1800px;
+    margin-bottom: 300px;
+    margin-left: 0;
+  }
+}
+.sale-page__card--single {
+  width: 32%;
+  margin-bottom: 20px;
+  display: inline-block;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 2px solid rgba(175, 175, 175, 0.507);
+  cursor: pointer;
+}
+.sale-page__card--single:hover {
+  border: 1px solid black !important;
+  cursor: pointer;
+}
+.landing-page__card--single:hover {
+  border: 1px solid black !important;
+  cursor: pointer;
 }
 @media screen and (max-width: 600px) {
   .landing-page__card--single {

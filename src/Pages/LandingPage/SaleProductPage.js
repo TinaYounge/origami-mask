@@ -10,12 +10,21 @@ import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import SwipeableTextMobileStepper from "../../Components/Header/Stepper";
 import ListCard from "../../Components/Card/ListCard";
-import { Typography } from "@mui/material";
+import {
+  Breadcrumbs,
+  Divider,
+  Link,
+  ListItem,
+  Pagination,
+  Typography,
+} from "@mui/material";
 import ImageListItemLanding from "../../Components/ImageList/ImageList";
 import Message from "../../Components/Message/Message";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
-import FeedBackList from "../../Components/FeedbackList/FeedbackList";
+import ListFilter from "../../Components/List/ListFilter";
+import ListCardProduct from "../../Components/Card/ListCardProduct";
+import SaleHeader from "../../Components/Header/SaleHeader";
 
 // import FeaturedPost from "./FeaturedPost";
 // import Main from "./Main";
@@ -60,28 +69,28 @@ const images = [
     des: "モダンなデザインの3層ハンドメイドマスク",
 
     imgPath:
-      "https://images.unsplash.com/photo-1586867763684-05933c155795?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "https://images.unsplash.com/photo-1586942593822-268ff3828458?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
   },
   {
     label: "保護された状態を保ち、スタイリッシュに見える",
     des: "モダンなデザインの3層ハンドメイドマスク",
 
     imgPath:
-      "https://images.unsplash.com/photo-1606501126768-b78d4569d3f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "https://images.unsplash.com/photo-1586216583928-5a1ecf74bce2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
   },
   {
     label: "保護された状態を保ち、スタイリッシュに見える",
     des: "モダンなデザインの3層ハンドメイドマスク",
 
     imgPath:
-      "https://images.unsplash.com/photo-1592199121537-7217efde1c73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80",
+      "https://images.unsplash.com/photo-1586579649032-1a9eacebf04a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
   },
   {
     label: "保護された状態を保ち、スタイリッシュに見える",
     des: "モダンなデザインの3層ハンドメイドマスク",
 
     imgPath:
-      "https://images.unsplash.com/photo-1603042521335-2bc9c8d9ee3b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+      "https://images.unsplash.com/photo-1548273989-e90f53ea0501?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
   },
 ];
 // const posts = [post1, post2, post3];
@@ -122,7 +131,7 @@ function LinkTab(props) {
     />
   );
 }
-export default function LandingPage() {
+export default function SaleProductPage() {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -132,92 +141,42 @@ export default function LandingPage() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container maxWidth="lg">
+        <Divider style={{ marginBottom: "10px" }} />
+        <SaleHeader images={images} />{" "}
         <main>
-          <SwipeableTextMobileStepper images={images} />
-          <Typography
-            gutterBottom
-            variant="h5"
-            component="div"
-            style={{
-              width: "100%",
-              textAlign: "center",
-              borderBottom: "2px solid #000",
-              lineHeight: "0rem",
-              margin: "20px 0px 40px",
-            }}
-          >
-            <span style={{ padding: "0 10px", backgroundColor: "#ffff" }}>
-              NEW{" "}
-            </span>
-          </Typography>
-          <ImageListItemLanding />
-          <Typography
-            gutterBottom
-            variant="h5"
-            component="div"
-            style={{
-              width: "100%",
-              textAlign: "center",
-              borderBottom: "2px solid #000",
-              lineHeight: "0rem",
-              margin: "50px 0px 20px",
-            }}
-          >
-            <span style={{ padding: "0 10px", backgroundColor: "#ffff" }}>
-              {" "}
-              週間人気ランキング
-            </span>
-          </Typography>
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            textColor="success"
-            TabIndicatorProps={{
-              style: {
-                backgroundColor: "#91986B",
-                color: "#ffffff",
-              },
-            }}
-            aria-label="  tabs example"
-          >
-            <LinkTab label="週間売上ランキング" href="/drafts" />
-            <LinkTab label="NEW" href="/trash" />
-            <LinkTab label="セール" href="/spam" />
-          </Tabs>
-          <ListCard />
-          <Typography
-            gutterBottom
-            variant="h5"
-            component="div"
-            style={{
-              width: "100%",
-              textAlign: "center",
-              borderBottom: "2px solid #000",
-              lineHeight: "0rem",
-              margin: "50px 0px 20px",
-            }}
-          >
-            <span style={{ padding: "0 10px", backgroundColor: "#ffff" }}>
-              {" "}
-              あなたのデザイン{" "}
-            </span>
-          </Typography>
-          <FeedBackList />
-          <Message />
-          {/* <Grid container spacing={4}>
-            {featuredPosts.map((post) => (
-              <FeaturedPost key={post.title} post={post} />
-            ))}
+          <Breadcrumbs aria-label="breadcrumb">
+            <Link underline="hover" color="inherit" href="/">
+              キールズホーム
+            </Link>
+            <Link
+              underline="hover"
+              color="inherit"
+              href="/getting-started/installation/"
+            >
+              スキンケア{" "}
+            </Link>
+            <Typography color="text.primary">保湿ケア</Typography>
+          </Breadcrumbs>
+          <Grid container spacing={2} style={{ marginTop: "5px" }}>
+            <Grid item xs={12} md={3}>
+              <ListFilter />
+            </Grid>
+            <Grid item xs={12} md={9}>
+              <ListCardProduct />
+            </Grid>
           </Grid>
-          <Grid container spacing={5} sx={{ mt: 3 }}>
-            <Main title="From the firehose" posts={posts} />
-            <Sidebar
-              title={sidebar.title}
-              description={sidebar.description}
-              archives={sidebar.archives}
-              social={sidebar.social}
-            />
-          </Grid> */}
+          <Message />
+
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "flex-end",
+              marginBottom: "20px",
+            }}
+          >
+            {" "}
+            <Pagination count={10} />
+          </div>
         </main>
       </Container>
     </ThemeProvider>
