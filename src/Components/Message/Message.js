@@ -7,7 +7,6 @@ import FileCopyIcon from "@mui/icons-material/FileCopyOutlined";
 import SaveIcon from "@mui/icons-material/Save";
 import PrintIcon from "@mui/icons-material/Print";
 import ShareIcon from "@mui/icons-material/Share";
-import { FormControlLabel, Switch } from "@mui/material";
 
 const actions = [
   { icon: <FileCopyIcon />, name: "Copy" },
@@ -35,16 +34,6 @@ export default function Message() {
         // display: { sx: "none" },
       }}
     >
-      {/* <FormControlLabel
-        control={
-          <Switch
-            checked={hidden}
-            onChange={handleHiddenChange}
-            color="primary"
-          />
-        }
-        label="Hidden"
-      /> */}
       <SpeedDial
         ariaLabel="SpeedDial playground  example"
         // hidden={hidden}

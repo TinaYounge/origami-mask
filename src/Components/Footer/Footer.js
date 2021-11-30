@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
-import { Grid, IconButton } from "@mui/material";
+import { Grid } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";

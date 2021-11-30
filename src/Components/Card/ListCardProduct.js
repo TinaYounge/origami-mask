@@ -1,9 +1,5 @@
 import React from "react";
-import ImgMediaCard from "./Card";
 import "./Card.css";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import ListCard from "./ListCard";
 import CardProduct from "./CardProduct";
 function ListCardProduct() {
   return (

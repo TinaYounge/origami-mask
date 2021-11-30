@@ -4,14 +4,40 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import SaleProductPage from "./Pages/LandingPage/SaleProductPage";
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
-import { Container, containerClasses } from "@mui/material";
+import { Container } from "@mui/material";
 import SinglePage from "./Pages/LandingPage/SinglePage";
 import Cart from "./Pages/LandingPage/Cart";
+import PhoneHeader from "./Components/Header/PhoneHeader";
+import { useState, useEffect } from "react";
+
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height,
+  };
+}
+function useWindowDimensions() {
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return windowDimensions;
+}
 
 function App() {
   const sections = [
     { title: "NEW", url: "/" },
-    { title: "リミテッド", url: "cart" },
+    { title: "リミテッド", url: "/cart" },
     { title: "レディース", url: "/woman" },
     { title: "メンズ", url: "#" },
     { title: "キッド", url: "#" },
@@ -20,11 +46,16 @@ function App() {
     { title: "連絡先", url: "#" },
     { title: "スタイル", url: "#" },
   ];
+  const { width } = useWindowDimensions();
+
   return (
     <Router>
       <Container maxWidth="lg">
-        {" "}
-        <Header title="Blog" sections={sections} maxWidth="lg" />
+        {width > 600 ? (
+          <Header title="Blog" sections={sections} maxWidth="lg" />
+        ) : (
+          <PhoneHeader title="Blog" sections={sections} maxWidth="lg" />
+        )}
       </Container>
       <Switch>
         <Route exact path="/" component={LandingPage} />
