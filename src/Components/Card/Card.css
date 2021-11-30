@@ -13,6 +13,7 @@
   display: inline-block;
   padding-left: 2px;
   padding-right: 2px;
+  margin-left: 10px;
 }
 .landing-page__card--list--next {
   margin-top: -35vh;
@@ -21,17 +22,33 @@
 }
 @media screen and (max-width: 600px) {
   .landing-page__card--single {
-    width: 40% !important;
+    width: 46% !important;
     display: inline-block;
-    margin-left: 12px;
+    margin-left: 5px;
   }
   .landing-page__card--list {
     padding-left: 10px;
-    height: 650px;
     width: 100%;
-    overflow-y: hidden;
+    height: 650px;
+    overflow: hidden;
   }
   .landing-page__card--list--next {
+    margin-top: -1600px;
+    margin-bottom: 300px;
+    margin-left: -10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .sale-page__card--single {
+    width: 46% !important;
+    display: inline-block;
+    margin-left: 5px;
+  }
+  .sale-page__card--list {
+    padding-left: 10px;
+    width: 100%;
+  }
+  .sale-page__card--list--next {
     margin-top: -1800px;
     margin-bottom: 300px;
     margin-left: 0;
@@ -41,8 +58,7 @@
   width: 32%;
   margin-bottom: 20px;
   display: inline-block;
-  padding-left: 20px;
-  padding-right: 20px;
+
   border: 2px solid rgba(175, 175, 175, 0.507);
   cursor: pointer;
 }
@@ -53,22 +69,4 @@
 .landing-page__card--single:hover {
   border: 1px solid black !important;
   cursor: pointer;
-}
-@media screen and (max-width: 600px) {
-  .landing-page__card--single {
-    width: 40% !important;
-    display: inline-block;
-    margin-left: 12px;
-  }
-  .landing-page__card--list {
-    padding-left: 10px;
-
-    width: 100%;
-    overflow-y: hidden;
-  }
-  .landing-page__card--list--next {
-    margin-top: -1800px;
-    margin-bottom: 300px;
-    margin-left: 0;
-  }
 }

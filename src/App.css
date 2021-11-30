@@ -38,16 +38,18 @@
 }
 .single-page__size--hover {
   margin-top: 10px;
-  color: rgb(0, 0, 0);
-  background-color: rgb(253, 253, 253);
+  color: rgb(0, 0, 0) !important;
+  background-color: rgb(253, 253, 253) !important;
+  border: black !important;
+  border-style: double !important;
 }
 .single-page__size--hover:hover {
-  color: rgb(255, 255, 255);
-  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255) !important;
+  background-color: rgb(0, 0, 0) !important;
   cursor: pointer;
 }
 .single-page__size--hover:active {
-  color: rgb(255, 255, 255);
-  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255) !important;
+  background-color: rgb(0, 0, 0) !important;
   cursor: pointer;
 }

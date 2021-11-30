@@ -8,7 +8,7 @@ import CardProduct from "./CardProduct";
 function ListCardProduct() {
   return (
     <div
-      className="landing-page__card--list"
+      className="sale-page__card--list"
       style={
         {
           // height: "80vh",
@@ -26,15 +26,6 @@ function ListCardProduct() {
       <div className="sale-page__card--single">
         <CardProduct />
       </div>
-      <div className="sale-page__card--single">
-        <CardProduct />
-      </div>{" "}
-      <div className="sale-page__card--single">
-        <CardProduct />
-      </div>{" "}
-      <div className="sale-page__card--single">
-        <CardProduct />
-      </div>{" "}
       <div className="sale-page__card--single">
         <CardProduct />
       </div>{" "}

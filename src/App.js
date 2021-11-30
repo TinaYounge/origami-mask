@@ -6,11 +6,12 @@ import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
 import { Container, containerClasses } from "@mui/material";
 import SinglePage from "./Pages/LandingPage/SinglePage";
+import Cart from "./Pages/LandingPage/Cart";
 
 function App() {
   const sections = [
-    { title: "NEW", url: "#" },
-    { title: "リミテッド", url: "#" },
+    { title: "NEW", url: "/" },
+    { title: "リミテッド", url: "cart" },
     { title: "レディース", url: "/woman" },
     { title: "メンズ", url: "#" },
     { title: "キッド", url: "#" },
@@ -29,6 +30,7 @@ function App() {
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/woman" component={SaleProductPage} />
         <Route exact path="/singleProduct" component={SinglePage} />
+        <Route exact path="/cart" component={Cart} />
       </Switch>
       <Footer />
     </Router>
