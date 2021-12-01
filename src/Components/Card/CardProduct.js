@@ -34,9 +34,9 @@ export default function CardProduct() {
           component="img"
           alt="green iguana"
           height="250"
-          image="https://i.pinimg.com/564x/70/64/e0/7064e0232bf3e7023d8f7e70dcbb8645.jpg"
+          image="https://i.pinimg.com/564x/20/12/03/201203920bbeb7c4e3c9d0fbc5f4978f.jpg"
         />
-        <Divider style={{ marginTop: "10px", marginBottom: "20px" }} />
+        {/* <Divider style={{ marginTop: "10px", marginBottom: "20px" }} /> */}
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             キールズ DS クリアリーホワイト{" "}
@@ -47,14 +47,16 @@ export default function CardProduct() {
         </CardContent>
         <Typography
           style={{
-            color: "black",
-            display: "flex",
-            justifyContent: "flex-end",
+            padding: "10px",
+            color: "#524E4D",
+            fontWeight: "bold",
+            fontSize: "20px",
+            // display: "flex",
+            // justifyContent: "flex-end",
           }}
         >
           10,230円（税込）
         </Typography>
-        <Divider style={{ marginTop: "10px", marginBottom: "20px" }} />
         <StyledRating
           readOnly
           name="customized-color"
@@ -62,9 +64,10 @@ export default function CardProduct() {
           precision={0.5}
           icon={<FavoriteIcon fontSize="inherit" />}
           emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
-          style={{ color: "#ff3d47", marginBottom: "20px" }}
+          style={{ color: "#ff3d47", marginBottom: "20px", padding: "10px" }}
         />{" "}
         <span style={{ color: "#ff3d47" }}> (600)</span>
+        {/* <Divider style={{ marginTop: "10px", marginBottom: "20px" }} /> */}
       </Card>
     </Link>
   );

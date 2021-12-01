@@ -84,7 +84,7 @@ export default function SinglePage() {
               <img
                 alt="green iguana"
                 height="548px"
-                src="https://i.pinimg.com/564x/70/64/e0/7064e0232bf3e7023d8f7e70dcbb8645.jpg"
+                src="https://i.pinimg.com/564x/20/12/03/201203920bbeb7c4e3c9d0fbc5f4978f.jpg"
               />{" "}
             </Grid>
             <Grid item xs={12} md={7}>
