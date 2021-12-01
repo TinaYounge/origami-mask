@@ -32,7 +32,7 @@ function Footer(props) {
           align="center"
           gutterBottom
           style={{
-            backgroundColor: "#91986B",
+            backgroundColor: "#D53020",
             color: "white",
             padding: "20px",
             borderBlockStyle: "double",

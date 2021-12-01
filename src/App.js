@@ -37,14 +37,13 @@ function useWindowDimensions() {
 function App() {
   const sections = [
     { title: "NEW", url: "/" },
-    { title: "リミテッド", url: "/cart" },
-    { title: "レディース", url: "/woman" },
-    { title: "メンズ", url: "#" },
-    { title: "キッド", url: "#" },
-    { title: "あなたのデザイン", url: "#" },
-    { title: "ストーリー", url: "#" },
-    { title: "連絡先", url: "#" },
-    { title: "スタイル", url: "#" },
+    { title: "Limited", url: "/cart" },
+    { title: "Nữ", url: "/woman" },
+    { title: "Nam", url: "#" },
+    { title: "Trẻ em", url: "#" },
+    { title: "Tự thiết kế", url: "#" },
+    { title: "Sale", url: "#" },
+    { title: "Yêu thích", url: "#" },
   ];
   const { width } = useWindowDimensions();
 

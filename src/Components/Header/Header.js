@@ -22,7 +22,7 @@ function Header(props) {
           sx={{ flex: 1 }}
         >
           <img
-            src="https://i.pinimg.com/564x/0f/82/55/0f8255da45fe440992d1313849e56117.jpg"
+            src="https://i.pinimg.com/564x/3b/34/bc/3b34bccc8578902ebe655c9ea6cdb259.jpg"
             alt="Logo"
             width="160px"
           />
@@ -32,7 +32,7 @@ function Header(props) {
           <SearchIcon />
         </IconButton>
         <Button variant="outlined" size="small">
-          Sign up
+          Đăng nhập{" "}
         </Button>
       </Toolbar>
       <Toolbar

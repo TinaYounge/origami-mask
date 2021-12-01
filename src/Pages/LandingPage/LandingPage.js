@@ -97,7 +97,7 @@ export default function LandingPage() {
           >
             <span style={{ padding: "0 10px", backgroundColor: "#ffff" }}>
               {" "}
-              週間人気ランキング
+              Sản phẩm ưa thích
             </span>
           </Typography>
           <Tabs
@@ -126,12 +126,17 @@ export default function LandingPage() {
               textAlign: "center",
               borderBottom: "2px solid #000",
               lineHeight: "0rem",
-              margin: "50px 0px 20px",
+              margin: "50px 0px 40px",
             }}
           >
-            <span style={{ padding: "0 10px", backgroundColor: "#ffff" }}>
+            <span
+              style={{
+                padding: "0 10px",
+                backgroundColor: "#ffff",
+              }}
+            >
               {" "}
-              あなたのデザイン{" "}
+              Khách hàng và Origami{" "}
             </span>
           </Typography>
           <FeedBackList />
